@@ -188,21 +188,35 @@
   <!-- SCRIPT DO SWIPER -->
   <script>
     const mainSwiper = new Swiper('.main-swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000, // muda a cada 3 segundos
-        disableOnInteraction: false,
+    loop: true,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    speed: 800,
+
+    autoHeight: false,
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+
+    on: {
+      imagesReady() {
+        this.update();
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      speed: 800,
-    });
+      slideChangeTransitionEnd() {
+        this.update();
+      }
+    }
+  });
+</script>
   </script>
 
       <!-- Contador -->
