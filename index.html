@@ -1068,7 +1068,7 @@
   details summary { list-style: none; }
   details summary svg { transform-origin: center; }
   details[open] summary svg { transform: rotate(180deg); }
-  
+
   /* ===== REMOVE ESPAÇO ENTRE SWIPER E FAIXA DE PREÇO ===== */
 .main-swiper,
 .swiper,
@@ -1082,6 +1082,24 @@
   display: block;
   width: 100%;
   height: auto;
+}
+/* REMOVE BARRA BRANCA ENTRE SLIDER E PREÇO */
+.main-swiper {
+  margin-bottom: -1px !important;
+}
+
+.bg-white,
+.bg-gray-50,
+.bg-gray-100 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* força colagem visual */
+section,
+.relative,
+.w-full {
+  margin-top: 0 !important;
 }
 </style>
 
